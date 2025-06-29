@@ -1,0 +1,30 @@
+.addtask {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .addtask input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    width: 60%;
+  }
+  
+  .addtask button {
+    padding: 12px 20px;
+    background: linear-gradient(to right, #f7971e, #ffd200); /* Yellow-Orange Gradient */
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .addtask button:hover {
+    background: linear-gradient(to right, #ffd200, #f7971e);
+  }
+  
