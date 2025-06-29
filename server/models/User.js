@@ -1,11 +1,11 @@
-// server/models/User.js
+
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    unique: true,       // Prevent duplicate usernames
+    unique: true,       
     trim: true
   },
   password: {
