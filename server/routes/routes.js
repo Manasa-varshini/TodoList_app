@@ -1,9 +1,9 @@
 const express = require('express');
 const Task = require('../models/models');
-const auth = require('../middleware/auth'); // ✅ Import the middleware
+const auth = require('../middleware/auth'); 
 const router = express.Router();
 
-// ✅ GET all tasks (requires login)
+
 router.get('/', auth, async (req, res) => {
     try {
         const tasks = await Task.find();
@@ -14,7 +14,7 @@ router.get('/', auth, async (req, res) => {
     }
 });
 
-// ✅ POST a new task (requires login)
+
 router.post('/', auth, async (req, res) => {
     try {
         const task = new Task(req.body);
@@ -26,7 +26,7 @@ router.post('/', auth, async (req, res) => {
     }
 });
 
-// ✅ PUT (update) a task (requires login)
+
 router.put('/:id', auth, async (req, res) => {
     try {
         const updatedTask = await Task.findOneAndUpdate(
@@ -41,7 +41,7 @@ router.put('/:id', auth, async (req, res) => {
     }
 });
 
-// ✅ DELETE a task (requires login)
+
 router.delete('/:id', auth, async (req, res) => {
     try {
         const deletedTask = await Task.findByIdAndDelete(req.params.id);
